@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <title>Chabe Safaris</title>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Carousel Example</title>
+
+    <!-- Owl Carousel CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/owl.carousel@2.3.4/dist/assets/owl.carousel.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/owl.carousel@2.3.4/dist/assets/owl.theme.default.min.css">
+
+    <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+
+    <!-- Owl Carousel JS -->
+    <script src="https://cdn.jsdelivr.net/npm/owl.carousel@2.3.4/dist/owl.carousel.min.js"></script>
+
+    <style>
+        .owl-carousel {
+            display: flex;
+            flex-wrap: nowrap;
+        }
+
+        .owl-carousel img {
+            width: 100%;
+            height: auto;
+        }
+        body {
+            font-family:Copperplate, Papyrus, fantasy;
+            margin: 0;
+            padding: 0;
+            background-color: gold;
+            color: #d15353;
+        }
+
+        header {
+            background-color: #00ff3c;
+            color: #fff;
+            padding: 20px;
+            text-align: center;
+        }
+
+        form {
+            max-width: 500px;
+            margin: 0 auto;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 8px;
+        }
+
+        input, select, textarea {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 16px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+        }
+
+        input[type="submit"] {
+            background-color: #007bff;
+            color: #fff;
+            cursor: pointer;
+        }
+
+        h1 {
+            margin: 0;
+        }
+
+        nav {
+            display: flex;
+            justify-content: center;
+            background-color: brown;
+            padding: 10px;
+        }
+
+        nav a {
+            float: left;
+            display: block;
+            color: white;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+        }
+
+        .nav-link {
+            float: left;
+            display: block;
+            color: white;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+        }
+
+        section {
+            padding: 20px;
+        }
+
+        .card-container {
+            display: flex;
+            background-color: aqua;
+        }
+
+        .card{
+            margin: 30px;
+            text-align: center;
+            background-color: #fff;
+            flex: 3;
+            position: relative;
+            padding: 20px;
+            overflow: hidden;
+        }
+
+        .card img{
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+
+
+        .tour-image {
+            width: 100%; 
+            max-width: 300px; 
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            margin-right: 20px;
+        }
+
+        footer {
+            background-color: #333;
+            color: #fff;
+            padding: 20px;
+            text-align: center;
+        }
+
+        #logo {
+            box-sizing: border-box;
+            float: left;
+            height:3rem;
+            border-radius: 50px;
+            width: 4rem; 
+            border-radius: 10px; 
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); 
+        }
+
+        .main-section {
+            background-image: url('background.jpeg'); 
+            background-size: cover; 
+            background-position: center; 
+            color: #fff; 
+            padding: 50px; 
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="header">
+            <img id="logo" src="logo.jpeg" alt="Your Logo">
+            <h1>CHABE SAFARIS</h1>
+        </div>
+    </header>
+    <section class="main-section"></section>
+<nav>
+    <a href="#" class="nav-link"><i class="fas fa-home"></i> Home</a>
+    <a href="./about.html" class="nav-link"><i class="fas fa-info-circle"></i> About</a>
+    <a href="./services.html" class="nav-link"><i class="fas fa-cogs"></i> Services</a>
+    <a href="./contacts.html" class="nav-link"><i class="fas fa-envelope"></i> Contact</a>
+</nav>
+
+ <!-- Image Carousel -->
+ <div class="owl-carousel">
+    <div><img src="https://placekitten.com/800/400" alt="Slide 1"></div>
+    <div><img src="https://placekitten.com/800/401" alt="Slide 2"></div>
+    <div><img src="https://placekitten.com/800/402" alt="Slide 3"></div>
+    <!-- Add more slides as needed -->
+</div>
+
+<!-- Initialize Owl Carousel -->
+<script>
+    $(document).ready(function(){
+        $(".owl-carousel").owlCarousel({
+            items: 2,
+            loop: true,
+            margin: 10,
+            autoplay: true,
+            autoplayTimeout: 3000,
+            responsive:{
+                0:{
+                    items:1
+                },
+                600:{
+                    items:2
+                },
+                1000:{
+                    items:3
+                }
+            }
+        });
+    });
+</script>
+
+
+    <section>
+        <h2>Explore Our Tours</h2>
+        <p>Welcome to Chabe Tours Company, where adventure awaits!</p>
+        <p>Discover amazing destinations and create unforgettable memories with our guided tours.</p>
+        </div>
+    </section>
+    <div class="card-container">
+
+<div class="card">
+    <h1>Tiger safari</h1>
+    <img src="tiger.jpeg" alt="Tiger Safari" class="tour-image">
+    <p>Scout the exquisiteness of the natural world by visiting India’s affluent wildlife sanctuaries and national parks. Wish to hear the roars of the tigers and the chirping of birds or want to sight the rare one-horned rhinos? Plan a wildlife trip to India and relish the best of wildlife experience with the finest safari tours, forest expeditions, bird watching and camping tours. Find all the wildlife-related information in this section that endeavours to keep you updated and takes you one step closer to the opulent flora and fauna of India.</p>
+</div>
+
+<div class="card">
+    <h1>Beast safari</h1>
+    <img src="beast.jpeg" alt="beast Safari" class="tour-image">
+    <p>Embark on a thrilling adventure with our Wild Beast Tour, where untamed landscapes and exotic creatures await your discovery. Traverse through dense jungles and vast savannahs, accompanied by expert guides who will unravel the secrets of the animal kingdom. Witness the raw beauty of nature as majestic beasts roam freely in their natural habitats, providing a once-in-a-lifetime opportunity to observe them up close. Immerse yourself in the wild, and let the untamed spirit of the Wild Beast Tour leave you with unforgettable memories of the awe-inspiring wonders of the animal world.</p>
+</div>
+
+<div class="card">
+    <h1>Zebra safari</h1>
+    <img src="Zebra.jpeg" alt="zebra Safari" class="tour-image">
+    <p>Explore and experience the wide and vast ecosystem of the Kalahari desert, feed your eyes with the endless beauty of black and white curtain of zebras, with an estimated 30,000 zebras, the majority being zebras and wildebeest migration, which is one of the existing zebra migration in Southern Africa.</p>
+</div>
+
+
+
+
+    </div>
+
+    <section>
+        <h2>Book Your Tour</h2>
+        <p>Ready to embark on a journey? Book your tour now and secure your spot!</p>
+
+        <form action="submit_booking_form.php" method="post">
+            <label for="name">Your Name:</label>
+            <input type="text" id="name" name="name" required>
+
+            <label for="email">Your Email:</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="tour">Select Tour:</label>
+            <select id="tour" name="tour" required>
+                <option value="Tiger Safari">Tiger Safari</option>
+                <option value="Beast Safari">Beast Safari</option>
+                <option value="Zebra Safari">Zebra Safari</option>
+            </select>
+
+            <label for="message">you are welcomed all:</label>
+            <textarea id="message" name="message" rows="4"></textarea>
+
+            <input type="submit" value="Submit Booking">
+        </form>
+    </section>
+
+    <footer>
+        <p>Contact us at info@example.com</p>
+    </footer>
+</body>
+</html>
+
+
